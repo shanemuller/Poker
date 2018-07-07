@@ -297,6 +297,11 @@ public class HandPokerTest {
 		assertTrue(hsp.getKickers().size() == 5);
 	}
 
+	//If you read my comment on the submission for the lab,
+	//I am re-committing this assignment after I fixed the error.
+	//The error was with the isStraight function where I used
+	//getCRC instead of getCards, but now it is fixed and
+	//working 100%.
 	@Test
 	public void ThreeOfAKind_Test1() {
 		HandPoker hp = new HandPoker();
@@ -315,7 +320,7 @@ public class HandPokerTest {
 		HandScorePoker hsp = hp.getHSP();
 
 		assertEquals(eHandStrength.ThreeOfAKind, hsp.geteHandStrength());
-		assertEquals(eRank.FIVE, hsp.getHiCard().geteRank());
+		assertEquals(eRank.THREE, hsp.getHiCard().geteRank());
 		assertNull(hsp.getLoCard());
 		assertTrue(hsp.getKickers().size() == 2);
 	}

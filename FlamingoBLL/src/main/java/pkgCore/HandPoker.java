@@ -193,13 +193,13 @@ public class HandPoker extends Hand {
 		int cnt = 0;
 		if (isAce() && getCRC().get(1).geteRank() == eRank.FIVE) {
 			for (int i = 1; i < 4; i++) {
-				if (getCRC().get(i + 1).geteRank().getiRankNbr() == (getCRC().get(i).geteRank().getiRankNbr() - 1))
+				if (getCards().get(i + 1).geteRank().getiRankNbr() == (getCards().get(i).geteRank().getiRankNbr() - 1))
 					cnt++;
 			}
 			cnt++;
 		} else {
 			for (int i = 0; i < 4; i++) {
-				if (getCRC().get(i + 1).geteRank().getiRankNbr() == (getCRC().get(i).geteRank().getiRankNbr() - 1))
+				if (getCards().get(i + 1).geteRank().getiRankNbr() == (getCards().get(i).geteRank().getiRankNbr() - 1))
 					cnt++;
 			}
 		}
@@ -243,7 +243,7 @@ public class HandPoker extends Hand {
 			HandScorePoker HS = getHSP();
 			HS.seteHandStrength(eHandStrength.TwoPair);
 			HS.setHiCard(getCards().get(getCRC().get(0).getiCardPosition()));
-			HS.setLoCard(getCards().get(getCRC().get(2).getiCardPosition()));
+			HS.setLoCard(getCards().get(getCRC().get(1).getiCardPosition()));
 			HS.setKickers(FindTheKickers(getCRC()));
 		}
 
