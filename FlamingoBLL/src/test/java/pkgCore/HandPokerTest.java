@@ -31,7 +31,6 @@ public class HandPokerTest {
 		assertEquals(eHandStrength.RoyalFlush, hsp.geteHandStrength());
 		assertEquals(eRank.ACE, hsp.getHiCard().geteRank());
 		assertNull(hsp.getLoCard());
-		assertTrue(hsp.getKickers().size() == 5);
 	}
 
 	@Test
@@ -56,7 +55,6 @@ public class HandPokerTest {
 		assertEquals(eHandStrength.StraightFlush, hsp.geteHandStrength());
 		assertEquals(eRank.ACE, hsp.getHiCard().geteRank());
 		assertNull(hsp.getLoCard());
-		assertTrue(hsp.getKickers().size() == 5);
 	}
 
 	@Test
@@ -81,7 +79,6 @@ public class HandPokerTest {
 		assertEquals(eHandStrength.StraightFlush, hsp.geteHandStrength());
 		assertEquals(eRank.SIX, hsp.getHiCard().geteRank());
 		assertNull(hsp.getLoCard());
-		assertTrue(hsp.getKickers().size() == 5);
 	}
 
 	@Test
@@ -154,7 +151,6 @@ public class HandPokerTest {
 		assertEquals(eHandStrength.FullHouse, hsp.geteHandStrength());
 		assertEquals(eRank.TEN, hsp.getHiCard().geteRank());
 		assertEquals(eRank.EIGHT, hsp.getLoCard().geteRank());
-		assertTrue(hsp.getKickers().size() == 0);
 
 	}
 
@@ -178,7 +174,6 @@ public class HandPokerTest {
 		assertEquals(eHandStrength.FullHouse, hsp.geteHandStrength());
 		assertEquals(eRank.EIGHT, hsp.getHiCard().geteRank());
 		assertEquals(eRank.TEN, hsp.getLoCard().geteRank());
-		assertTrue(hsp.getKickers().size() == 0);
 
 	}
 
@@ -202,7 +197,6 @@ public class HandPokerTest {
 		assertEquals(eHandStrength.Flush, hsp.geteHandStrength());
 		assertEquals(eRank.JACK, hsp.getHiCard().geteRank());
 		assertNull(hsp.getLoCard());
-		assertTrue(hsp.getKickers().size() == 5);
 	}
 	
 	@Test
@@ -225,7 +219,6 @@ public class HandPokerTest {
 		assertEquals(eHandStrength.Flush, hsp.geteHandStrength());
 		assertEquals(eRank.JACK, hsp.getHiCard().geteRank());
 		assertNull(hsp.getLoCard());
-		assertTrue(hsp.getKickers().size() == 5);
 	}
 
 	@Test
@@ -248,7 +241,6 @@ public class HandPokerTest {
 		assertEquals(eHandStrength.Straight, hsp.geteHandStrength());
 		assertEquals(eRank.ACE, hsp.getHiCard().geteRank());
 		assertNull(hsp.getLoCard());
-		assertTrue(hsp.getKickers().size() == 5);
 	}
 
 	@Test
@@ -271,7 +263,6 @@ public class HandPokerTest {
 		assertEquals(eHandStrength.Straight, hsp.geteHandStrength());
 		assertEquals(eRank.ACE, hsp.getHiCard().geteRank());
 		assertNull(hsp.getLoCard());
-		assertTrue(hsp.getKickers().size() == 5);
 	}
 
 	@Test
@@ -294,14 +285,8 @@ public class HandPokerTest {
 		assertEquals(eHandStrength.Straight, hsp.geteHandStrength());
 		assertEquals(eRank.SIX, hsp.getHiCard().geteRank());
 		assertNull(hsp.getLoCard());
-		assertTrue(hsp.getKickers().size() == 5);
 	}
 
-	//If you read my comment on the submission for the lab,
-	//I am re-committing this assignment after I fixed the error.
-	//The error was with the isStraight function where I used
-	//getCRC instead of getCards, but now it is fixed and
-	//working 100%.
 	@Test
 	public void ThreeOfAKind_Test1() {
 		HandPoker hp = new HandPoker();

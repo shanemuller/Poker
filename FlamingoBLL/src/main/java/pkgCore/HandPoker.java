@@ -218,7 +218,7 @@ public class HandPoker extends Hand {
 	// TODO: Finish this method
 	public boolean isThreeOfAKind() {
 		boolean bisThreeOfAKind = false;
-		
+
 		if ((getCRC().size() == 3) && (getCRC().get(0).getiCnt() == 3) && (getCRC().get(1).getiCnt() == 1)
 				&& (getCRC().get(2).getiCnt() == 1)) {
 			bisThreeOfAKind = true;
@@ -271,14 +271,12 @@ public class HandPoker extends Hand {
 	public boolean isHighCard() {
 		boolean bisHighCard = false;
 
-		if ((getCRC().size() == 5)) {
-			bisHighCard = true;
-			HandScorePoker HS = getHSP();
-			HS.seteHandStrength(eHandStrength.HighCard);
-			HS.setHiCard(getCards().get(getCRC().get(0).getiCardPosition()));
-			HS.setLoCard(null);
-			HS.setKickers(FindTheKickers(getCRC()));
-		}
+		bisHighCard = true;
+		HandScorePoker HS = getHSP();
+		HS.seteHandStrength(eHandStrength.HighCard);
+		HS.setHiCard(getCards().get(getCRC().get(0).getiCardPosition()));
+		HS.setLoCard(null);
+		HS.setKickers(FindTheKickers(getCRC()));
 		return bisHighCard;
 	}
 
